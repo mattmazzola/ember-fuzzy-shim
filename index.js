@@ -2,5 +2,9 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-fuzzy'
+  name: 'ember-fuzzy',
+
+  isDevelopingAddon: function() {
+    return true;
+  }
 };
