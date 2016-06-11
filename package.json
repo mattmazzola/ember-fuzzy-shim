@@ -1,5 +1,5 @@
 {
-  "name": "ember-fuzzy",
+  "name": "ember-fuzzy-shim",
   "version": "0.1.0",
   "description": "The default blueprint for ember-cli addons.",
   "directories": {

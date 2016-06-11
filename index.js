@@ -2,7 +2,7 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-fuzzy',
+  name: 'ember-fuzzy-shim',
 
   isDevelopingAddon: function() {
     return true;
