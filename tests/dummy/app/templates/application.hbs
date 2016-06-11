@@ -22,7 +22,7 @@
       <tr>
         <td>{{state.index}}</td>
         <td>{{state.score}}</td>
-        <td>{{state.string}}</td>
+        <td>{{fuzzy-highlight state.string pre="<" post=">"}}</td>
         <td>{{state.original.name}}</td>
       </tr>
     {{/each}}
