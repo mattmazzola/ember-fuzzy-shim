@@ -1,7 +1,7 @@
 {
   "name": "ember-fuzzy-shim",
   "version": "0.1.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "Ember addon which adds fuzzy shim exposing fuzzy as module and also provides fuzzy-highlight helper",
   "directories": {
     "doc": "doc",
     "test": "tests"

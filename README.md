@@ -1,6 +1,26 @@
 # Ember-fuzzy-shim
+Ember addon which adds fuzzy shim exposing fuzzy as module and also provides fuzzy-highlight helper
 
-This README outlines the details of collaborating on this Ember addon.
+## Usage
+```
+import fuzzy from 'fuzzy';
+```
+
+`{{fuzzy-highlight}}` helper used to stylize the characters matched from the search term
+
+Basic Usage:
+```
+// name = 'a<b>c';
+{{fuzzy-highlight name}}
+// => 'a<span class="highlight">b</span>c'
+```
+
+Customized Usage:
+```
+// name = 'a[b]c<d>e';
+{{fuzzy-highlight name pre="[" post="]" cssClass="xyz"}}
+// => 'a<span class="xyz">b</span>c<d>e'
+```
 
 ## Installation
 
