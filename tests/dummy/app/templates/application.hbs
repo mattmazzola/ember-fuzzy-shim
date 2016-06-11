@@ -1,3 +1,32 @@
-<h2 id="title">Welcome to Ember</h2>
+<h1 id="title">Ember-fuzzy-shim</h1>
+<p>This addon allows you to use `import fuzzy from 'fuzzy';` which can be used to implement fuzzy searching.</p>
+
+<p>The following example shows matching input text to a list of states.</p>
+
+
+<h4>Input:</h4>
+{{input type="text" value=searchTerm }}
+
+<h4>Filtered Cities:</h4>
+<table>
+  <thead>
+    <tr>
+      <th>Index</th>
+      <th>Score</th>
+      <th>Term</th>
+      <th>Original</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each filteredStates as |state| }}
+      <tr>
+        <td>{{state.index}}</td>
+        <td>{{state.score}}</td>
+        <td>{{state.string}}</td>
+        <td>{{state.original.name}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
 
 {{outlet}}
