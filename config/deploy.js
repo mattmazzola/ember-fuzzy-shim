@@ -2,8 +2,11 @@
 
 module.exports = function(deployTarget) {
   var ENV = {
-    build: {}
+    build: {},
     // include other plugin configuration that applies to all deploy targets here
+    ghpages: {
+      gitRemoteUrl: 'https://github.com/mattmazzola/ember-fuzzy-shim'
+    }
   };
 
   if (deployTarget === 'development') {
