@@ -1,32 +1,55 @@
-<h1 id="title">Ember-fuzzy-shim</h1>
-<p>This addon allows you to use `import fuzzy from 'fuzzy';` which can be used to implement fuzzy searching.</p>
+<header>
+  <h1 id="title">Ember-fuzzy-shim</h1>
+</header>
+<div class="container">
 
-<p>The following example shows matching input text to a list of states.</p>
+  <p>This addon does 2 things.</p>
+  <ol>
+    <li>
+      <b><p>Adds shim which allows you to import fuzzy as module.</p></b>
+      <code>import fuzzy from 'fuzzy';</code>
+    </li>
+    <li>
+      <b><p>Adds <code>&#123;&#123;fuzzy-highlight matchedString &#125;&#125;</code> helper which applies a class to characters matched during fuzzy searching.</p></b>
+      <p>By default the fuzzy searcher will wrap matched characters with '&lt;' and '&gt;'. E.g. input is 'a' and string 'cat' output is 'c&lt;a&gt;t' <br>
+      You then setup the highlight helper to detect these characters and replace them with span tag and class which can be used for formatting.
+      </p>
+      <p>
+        Advanced Usage:
+      </p>
+      <code>&#123;&#123;fuzzy-highlight "a[b]c&lt;d&gt;e" pre="[" post="]" cssClass="myClass" &#125;&#125;</code> <br>
+      <code>a&lt;span class=&quot;myClass&quot;&gt;b&lt;/span&gt;c&lt;d&gt;e</code>
+    </li>
+  </ol>
 
+  <p>The following example shows matching input text to a list of states.</p>
 
-<h4>Input:</h4>
-{{input type="text" value=searchTerm }}
+  <h2>Full Fuzzy Search Example</h2>
+  <h4>Input:</h4>
+  {{input type="text" value=searchTerm class="searchInput" }}
 
-<h4>Filtered Cities:</h4>
-<table>
-  <thead>
-    <tr>
-      <th>Index</th>
-      <th>Score</th>
-      <th>Term</th>
-      <th>Original</th>
-    </tr>
-  </thead>
-  <tbody>
-    {{#each filteredStates as |state| }}
+  <h4>Filtered Cities:</h4>
+  <table>
+    <thead>
       <tr>
-        <td>{{state.index}}</td>
-        <td>{{state.score}}</td>
-        <td>{{fuzzy-highlight state.string pre="<" post=">"}}</td>
-        <td>{{state.original.name}}</td>
+        <th>Index</th>
+        <th>Score</th>
+        <th>Term</th>
+        <th>Original</th>
       </tr>
-    {{/each}}
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      {{#each filteredStates as |state| }}
+        <tr>
+          <td>{{state.index}}</td>
+          <td>{{state.score}}</td>
+          <td>{{fuzzy-highlight state.string}}</td>
+          <td>{{state.original.name}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
 
-{{outlet}}
+  {{outlet}}
+
+</div>

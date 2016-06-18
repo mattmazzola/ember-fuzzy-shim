@@ -1,3 +1,41 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fafafa;
+  padding: 0;
+  margin: 0;
+  font-size: 22px;
+  padding-bottom: 5rem;
+}
+
+header {
+  background: rgba(54,207,245,1);
+  background: -moz-linear-gradient(-45deg, rgba(54,207,245,1) 0%, rgba(39,230,122,1) 100%);
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(54,207,245,1)), color-stop(100%, rgba(39,230,122,1)));
+  background: -webkit-linear-gradient(-45deg, rgba(54,207,245,1) 0%, rgba(39,230,122,1) 100%);
+  background: -o-linear-gradient(-45deg, rgba(54,207,245,1) 0%, rgba(39,230,122,1) 100%);
+  background: -ms-linear-gradient(-45deg, rgba(54,207,245,1) 0%, rgba(39,230,122,1) 100%);
+  background: linear-gradient(135deg, rgba(54,207,245,1) 0%, rgba(39,230,122,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#36cff5', endColorstr='#27e67a', GradientType=1 );
+  text-align: center;
+  padding: 1.75rem 0 3rem 0;
+  color: white;
+  font-size: 48px;
+  margin-bottom: 1em;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+input {
+  width: 100%;
+}
+input.searchInput {
+  padding: 0.5em;
+  font-size: 1.5rem;
+}
+
 .highlight {
   font-weight: bold;
 }
